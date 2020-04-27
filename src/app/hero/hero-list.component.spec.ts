@@ -131,7 +131,7 @@ class Page {
     // Get the component's injected router and spy on it
     const router = fixture.debugElement.injector.get(Router);
     this.navSpy = spyOn(router, 'navigate');
-  };
+  }
 }
 
 
