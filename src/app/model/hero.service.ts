@@ -12,7 +12,7 @@ export class HeroService {
 
   getHero(id: number | string): Promise<Hero> {
     if (typeof id === 'string') {
-      id = parseInt(10);   //(id as string, 10)
+      id = parseInt(10); 
     }
     return this.getHeroes().then(
       heroes => heroes.find(hero => hero.id === id)
