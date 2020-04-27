@@ -163,8 +163,8 @@ class Page {
     const events = this.recordedEvents;
     expect(events.length).toEqual(pairs.length, 'actual/expected events length mismatch');
     for (let i = 0; i < events.length; ++i) {
-      expect((<any>events[i].constructor).name).toBe(pairs[i][0].name, 'unexpected event name');
-      expect((<any>events[i]).url).toBe(pairs[i][1], 'unexpected event url');
+      expect((<any>events.constructor).name).toBe(pairs[0].name, 'unexpected event name');
+      expect((<any>events).url).toBe(pairs[1], 'unexpected event url');
     }
   }
 
