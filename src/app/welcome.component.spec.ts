@@ -34,8 +34,7 @@ describe('WelcomeComponent', () => {
     });
 
     fixture = TestBed.createComponent(WelcomeComponent);
-    comp    = fixture.componentInstance;
-
+    
     // UserService actually injected into the component
     userService = fixture.debugElement.injector.get(UserService);
     componentUserService = userService;
