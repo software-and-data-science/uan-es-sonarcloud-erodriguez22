@@ -21,7 +21,7 @@ export class FakeHeroService implements HeroService {
 
   getHero(id: number | string) {
     if (typeof id === 'string') {
-      id = parseInt(id as string, 10);
+      id = parseInt(10);
     }
     let hero = this.heroes.find(h => h.id === id);
     return this.lastPromise = Promise.resolve(hero);
