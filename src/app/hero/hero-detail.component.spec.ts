@@ -263,23 +263,9 @@ import { SharedModule }        from '../shared/shared.module';
 function sharedModuleSetup() {
   beforeEach( async(() => {
     TestBed.configureTestingModule({
-      imports:      [ SharedModule ],
-      declarations: [ HeroDetailComponent ],
-      providers: [
-        { provide: ActivatedRoute, useValue: activatedRoute },
-        { provide: HeroService,    useClass: FakeHeroService },
-        { provide: Router,         useClass: RouterStub},
-      ]
+      imports:      [ SharedModule ]
     })
     .compileComponents();
-  }));
-
-  it('should display 1st hero\'s name', fakeAsync(() => {
-    const expectedHero = firstHero;
-    activatedRoute.testParamMap = { id: expectedHero.id };
-    createComponent().then(() => {
-      expect(page.nameDisplay.textContent).toBe(expectedHero.name);
-    });
   }));
 }
 
